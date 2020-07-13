@@ -1,6 +1,6 @@
 .hero {
   width: 100vw;
-  height: 400px;
+  height: 40vh;
   background-image: url(./img/hero.jpg);
   background-size: cover;
   padding-top: 10px;
@@ -8,16 +8,18 @@
   flex-direction: column;
 }
 .hero nav {
-  align-content: flex-end;
-  margin-left: 50px;
-  /* border: 10px solid skyblue; */
-  width: 150px;
-  height: 50px;
+  margin-left: 2vw;
+  position: relative;
+  bottom: 50px;
+  /*   border: 10px solid skyblue; */
+  width: 300px;
+  height: 150px;
+  margin-bottom: 30px;
 }
 nav img {
-  width: 50px;
-  height: 50px;
-  padding: 5px;
+  max-width: 6vw;
+  max-height: auto;
+  flex-shrink: 5;
 }
 .hero h1,
 .hero h2 {
@@ -32,7 +34,7 @@ nav img {
 .hero h1 {
   border-top: 160px;
   border-bottom: 10px;
-  font-size: 48px;
+  /*   font-size: 48px; */
 }
 .hero h2 {
   border-top: 10px;
@@ -42,32 +44,34 @@ body {
   background-color: slategray;
   margin: 0px;
   font-family: "Montserrat", sans-serif;
+  flex-shrink: 2;
 }
 
 .bioBox {
   display: inline-flex;
-  justify-content: flex-start;
-  margin-left: 100px;
-  margin-right: 100px;
-}
-.bioImg {
-  width: 300px;
+  justify-content: space-evenly;
+  margin-left: 3vw;
+  margin-right: 5vw;
 }
 
-.bioContent h2 {
+/* .bioContent h2 {
   font-size: 32px;
-}
-.bioContent p {
-  font-size: 24px;
+} */
+.bioContent p,
+.bioContent h2 {
+  /* font-size: 24px; */
   padding-top: 15px;
+  margin-left: 4vw;
   align-self: center;
 }
 
 #profilePic {
-  height: 250px;
-  width: 250px;
-  padding: 25px;
+  max-height: 100%;
+  max-width: 100%;
+  padding: 10px;
+  z-index: 10;
 }
+
 .lists {
   display: flex;
   justify-content: space-evenly;
@@ -76,21 +80,47 @@ body {
 
 .skillSet {
   /* background-color: turquoise; */
-  font-size: 28px;
+  /* font-size: 28px; */
   padding: 15px;
 }
-.skillSet span {
+/* .skillSet span {
   font-size: 18px;
 }
+ */
 .hobbies {
   /*  background-color: yellowgreen; */
-  font-size: 28px;
+  /*  font-size: 28px; */
   padding: 15px;
 }
-.hobbies h5 {
+/* .hobbies h5 {
   font-size: 32px;
-}
+} */
+
 footer {
   margin-top: 50px;
   text-align: center;
+}
+
+/* Font Sizes */
+
+p,
+li {
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+span {
+  font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+h1 {
+  font-size: calc(48px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+h2,
+h3,
+h4,
+h5,
+h5 {
+  font-size: calc(18px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+footer {
+  font-size: calc(8px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
